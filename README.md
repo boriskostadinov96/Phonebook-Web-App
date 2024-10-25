@@ -21,10 +21,8 @@ User Interface:
 
 - Django: The web framework used for developing the application.
 
-- SQLAlchemy: An ORM used for database interaction and management.
+- SQLite3: Database system used to store and retrieve contact information.
 
-- PostgreSQL: The database system used to store album and song information.
+- HTML/CSS: For structuring and styling the user interface.
 
-- HTML/CSS: For designing the user interface and styling the application.
-
-- Django Forms: For handling user input and validation during album and song creation.
+- Django Templates: For rendering dynamic content, including contact lists and form handling for adding contacts.
