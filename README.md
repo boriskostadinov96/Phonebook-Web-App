@@ -1,84 +1,30 @@
-# Phonebook-Web-App<html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" type="text/css" href="/static/phonebook/style.css" />
-      <title>Phonebook</title>
-   </head>
-   <body>
+# Phonebook Web Application
 
-<!--  navigation bar  -->
-      <nav class="navbar navbar-default">
-         <div class="container-fluid">
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                  data-target="#bs-example-navbar-collapse-1">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="/">Phonebook</a>
-            </div>
-         </div>
-      </nav>
-<!--  end navigation bar  -->
+## Overview:
+This is a phonebook web application built with Python using Django as the web framework and SQLite3 as the database. The application allows users to manage contacts, providing functionalities for creating and viewing stored contacts in a simple interface.
 
-<!--  visualizing contacts table  -->
-      <div class="container">
-         <legend>All Contacts</legend>
-         <table class="table">
-            <thead>
-               <tr>
-                  <th scope="col">Name</th>
-                  <th scope="col">Number</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-               <tr>{% for contact in contacts %}
-               <tr>
-                  <td> {{ contact.name }} </td>
-                  <td>{{ contact.number }}</td>
-                  {% endfor %}
-               </tr>
-            </tbody>
-         </table>
-<!--  end visualizing contacts table  -->
+## Features:
+Contact Management:
 
-<!--  adding contact form  -->
-         <form class="form-horizontal" action="{% url 'new-contact' %}" method="POST">
-            {% csrf_token %}
-            <fieldset>
-               <legend>New Contact</legend>
-               <div class="form-group">
-                  <label for="name" class="col-lg-2 control-label">Name</label>
-                  <div class="col-lg-10">
-                     <input type="text" autofocus="autofocus" name="name" title="Name" class="form-control"
-                        id="name"/>
-                  </div>
-               </div>
-               <div class="form-group">
-                  <label for="number" class="col-lg-2 control-label">Number</label>
-                  <div class="col-lg-10">
-                     <input type="number" autofocus="autofocus" name="number" title="Number" class="form-control"
-                        id="number"/>
-                  </div>
-               </div>
-               <div class="form-group">
-                  <div class="col-lg-10 col-lg-offset-2">
-                     <button type="submit" class="btn btn-primary">Add</button>
-                  </div>
-               </div>
-            </fieldset>
-         </form>
-<!--  end adding contact form  -->
+- Users can add new contacts to the phonebook. Each contact has a name and a phone number, which are entered through a web form.
 
-<!--  footer  -->
-         <hr/>
-         <footer>
-            <p>&copy;boriskostadinov96 </p>
-         </footer>
-      </div>
-   </body>
-</html>
+Contact List Display:
+
+- All saved contacts are displayed on the main page, providing a quick overview of stored contact details in a simple table format.
+
+User Interface:
+
+- The application features a straightforward, user-friendly interface built with Django templates. It includes navigation and form handling, making it easy to add and view contacts.
+
+## Technologies Used:
+- Python: The core programming language for the application.
+
+- Django: The web framework used for developing the application.
+
+- SQLAlchemy: An ORM used for database interaction and management.
+
+- PostgreSQL: The database system used to store album and song information.
+
+- HTML/CSS: For designing the user interface and styling the application.
+
+- Django Forms: For handling user input and validation during album and song creation.
